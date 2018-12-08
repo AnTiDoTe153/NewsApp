@@ -1,8 +1,10 @@
 package Users;
+import Events.NewsEvent;
+import Events.NewsEventListener;
 import Server.Server;
 import News.News;
 
-public class Writer {
+public class Writer extends NewsEventListener {
     private final String name;
     private final Server server;
 
@@ -11,7 +13,14 @@ public class Writer {
         this.server = server;
     }
 
-    public void publishNews(News news){
+    public void publishNews(String category, String title, String content){
+        News news = new News(category, title, name, content);
+        server.publishNews(news, this);
+    }
 
+    @Override
+    public void handleEvent(NewsEvent event) {
+        News content = event.getContent();
+        System.out.println(content);
     }
 }
