@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="918cabd9-659b-4f20-ad0b-d9bb1f49b130" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/NewsEventType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/News/News.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/EventListenerManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/NewsEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/NewsEventListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,7 +37,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewsEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Events/NewsEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventListenerManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Events/EventListenerManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsEventListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Events/NewsEventListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/News/News.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -57,8 +95,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,13 +114,15 @@
         <option value="$PROJECT_DIR$/src/News/ScienceNews.java" />
         <option value="$PROJECT_DIR$/src/News/PoliticsNews.java" />
         <option value="$PROJECT_DIR$/src/News/UselessNews.java" />
-        <option value="$PROJECT_DIR$/src/Events/NewsEvent.java" />
         <option value="$PROJECT_DIR$/src/Events/Event.java" />
         <option value="$PROJECT_DIR$/src/Events/Subscriber.java" />
         <option value="$PROJECT_DIR$/src/Events/EventManager.java" />
         <option value="$PROJECT_DIR$/src/Events/NewsEventType.java" />
         <option value="$PROJECT_DIR$/src/Events/NewsEventFilter.java" />
         <option value="$PROJECT_DIR$/src/News/News.java" />
+        <option value="$PROJECT_DIR$/src/Events/NewsEvent.java" />
+        <option value="$PROJECT_DIR$/src/Events/NewsEventListener.java" />
+        <option value="$PROJECT_DIR$/src/Events/EventListenerManager.java" />
       </list>
     </option>
   </component>
@@ -261,7 +301,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544186650439</updated>
-      <workItem from="1544186653739" duration="3541000" />
+      <workItem from="1544186653739" duration="5745000" />
     </task>
     <task id="LOCAL-00001" summary="[clean] removed all classes from project for refactoring">
       <created>1544256685637</created>
@@ -270,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544256685638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[dev] Added the News base class">
+      <created>1544257585617</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544257585617</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3541000" />
+    <option name="totallyTimeSpent" value="5745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -316,7 +363,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[clean] removed all classes from project for refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="[clean] removed all classes from project for refactoring" />
+    <MESSAGE value="[dev] Added the News base class" />
+    <option name="LAST_COMMIT_MESSAGE" value="[dev] Added the News base class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -363,14 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Events/NewsEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Events/Subscriber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -395,14 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Events/NewsEventType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/News/News.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -412,6 +444,45 @@
             <element signature="e#612#613#0" expanded="true" />
             <element signature="e#654#655#0" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events/NewsEventType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events/NewsEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events/NewsEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events/EventListenerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
