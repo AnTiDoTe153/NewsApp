@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="918cabd9-659b-4f20-ad0b-d9bb1f49b130" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/EventListenerManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/NewsEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/NewsEventListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Events/EventDispatcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,13 +50,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventListenerManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventListenerManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Events/EventListenerManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventDispatcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Events/EventDispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#976#977#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/Events/NewsEvent.java" />
         <option value="$PROJECT_DIR$/src/Events/NewsEventListener.java" />
         <option value="$PROJECT_DIR$/src/Events/EventListenerManager.java" />
+        <option value="$PROJECT_DIR$/src/Events/EventDispatcher.java" />
       </list>
     </option>
   </component>
@@ -301,7 +314,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544186650439</updated>
-      <workItem from="1544186653739" duration="5745000" />
+      <workItem from="1544186653739" duration="7045000" />
     </task>
     <task id="LOCAL-00001" summary="[clean] removed all classes from project for refactoring">
       <created>1544256685637</created>
@@ -317,11 +330,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544257585617</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[dev] Added EventListenerManager">
+      <created>1544267108054</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544267108054</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5745000" />
+    <option name="totallyTimeSpent" value="7045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -364,7 +384,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[clean] removed all classes from project for refactoring" />
     <MESSAGE value="[dev] Added the News base class" />
-    <option name="LAST_COMMIT_MESSAGE" value="[dev] Added the News base class" />
+    <MESSAGE value="[dev] Added EventListenerManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="[dev] Added EventListenerManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -483,6 +504,18 @@
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events/EventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
           </folding>
         </state>
       </provider>
