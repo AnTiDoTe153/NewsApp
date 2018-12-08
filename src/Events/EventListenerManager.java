@@ -9,15 +9,20 @@ public class EventListenerManager {
     private Map<NewsEventType, List<NewsEventListener>> listenerMap = new HashMap<>();
 
     public void register(NewsEventType eventType, NewsEventListener listener){
-        listenerMap.computeIfAbsent(eventType, elem -> new ArrayList<>()).add(listener);
+        synchronized(mutex){
+            listenerMap.computeIfAbsent(eventType, elem -> new ArrayList<>()).add(listener);
+        }
+
     }
 
     public void unregister(NewsEventType eventType, NewsEventListener listener){
-        if(mapContainsListener(eventType, listener)){
-            listenerMap.computeIfPresent(eventType, (type,list) -> {
-                list.remove(listener);
-                return list.isEmpty()?null:list;
-            });
+        synchronized (mutex){
+            if(mapContainsListener(eventType, listener)){
+                listenerMap.computeIfPresent(eventType, (type,list) -> {
+                    list.remove(listener);
+                    return list.isEmpty()?null:list;
+                });
+            }
         }
     }
 
