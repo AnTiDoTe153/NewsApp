@@ -4,7 +4,6 @@ import Events.NewsEvent;
 import Events.NewsEventListener;
 import News.News;
 import Server.Server;
-import
 
 public class Reader extends NewsEventListener {
     private Server server;
