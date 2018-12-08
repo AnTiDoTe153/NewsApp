@@ -43,4 +43,12 @@ public class News {
 
         return messageBuilder.toString();
     }
+
+    public boolean Equals(Object object){
+        if(object instanceof News){
+            News otherNews = (News) object;
+            return otherNews.author == this.author && otherNews.title == title;
+        }
+        return false;
+    }
 }
