@@ -27,15 +27,36 @@ public class Server {
         return instance;
     }
 
-
     private void publishNews(News news, NewsEventListener listener){
         synchronized(mutex){
             newsList.addFirst(news);
         }
         eventDispatcher.register(NewsEventType.NEWS_READ, listener);
-        NewsEvent event = new NewsEvent(NewsEventType.NEWS_APPEARED, news);
 
+        NewsEvent event = new NewsEvent(NewsEventType.NEWS_APPEARED, news);
         eventDispatcher.publishEvent(event);
+    }
+
+    private void updateNews(News news){
+        synchronized(mutex){
+            newsList.stream().filter(news::equals).map(item -> news);
+            NewsEvent event = new NewsEvent(NewsEventType.NEWS_CHANGED, news);
+            eventDispatcher.publishEvent(event);
+        }
+    }
+
+    private void deleteNews(News news){
+        synchronized(mutex){
+            newsList.removeIf(news::equals);
+        }
+        NewsEvent event = new NewsEvent(NewsEventType.NEWS_DELETED, news);
+        eventDispatcher.publishEvent(event);
+    }
+
+    private void subscribeToNews(NewsEventListener listener, String newsType){
+        eventDispatcher.register(NewsEventType.NEWS_CHANGED, listener);
+        eventDispatcher.register(NewsEventType.NEWS_APPEARED, listener);
+        eventDispatcher.register(NewsEventType.NEWS_DELETED, listener);
     }
 
     private void serverLoop(){
