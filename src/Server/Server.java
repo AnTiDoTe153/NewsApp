@@ -5,7 +5,6 @@ import Events.NewsEvent;
 import Events.NewsEventListener;
 import Events.NewsEventType;
 import News.News;
-
 import java.util.LinkedList;
 
 public class Server {
