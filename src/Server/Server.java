@@ -1,9 +1,6 @@
 package Server;
 
-import Events.EventDispatcher;
-import Events.NewsEvent;
-import Events.NewsEventListener;
-import Events.NewsEventType;
+import Events.*;
 import News.News;
 import java.util.LinkedList;
 
@@ -52,10 +49,13 @@ public class Server {
         eventDispatcher.publishEvent(event);
     }
 
-    public void subscribeToNews(NewsEventListener listener, String newsType){
-        eventDispatcher.register(NewsEventType.NEWS_CHANGED, listener);
-        eventDispatcher.register(NewsEventType.NEWS_APPEARED, listener);
-        eventDispatcher.register(NewsEventType.NEWS_DELETED, listener);
+    public void subscribeToNewsByType(NewsEventListener listener, String newsType){
+        ListenerData listenerData = new ListenerData(listener);
+        listenerData.addFilter(event -> event.getCategory().equals(newsType));
+
+        eventDispatcher.register(NewsEventType.NEWS_CHANGED, listenerData);
+        eventDispatcher.register(NewsEventType.NEWS_APPEARED, listenerData);
+        eventDispatcher.register(NewsEventType.NEWS_DELETED, listenerData);
     }
 
     private void serverLoop(){
