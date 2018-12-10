@@ -7,19 +7,23 @@ import Server.Server;
 
 public class Reader extends NewsEventListener {
     private Server server;
+    private String name;
 
-    public Reader(Server server){
+    public Reader(Server server, String name){
         this.server = server;
+        this.name = name;
     }
 
     public void subscribeToNews(String newsType){
-        server.subscribeToNews(this, newsType);
+        server.subscribeToNewsByType(this, newsType);
     }
 
 
     @Override
     public void handleEvent(NewsEvent event) {
         News content = event.getContent();
-        System.out.println(content);
+        String evenDescription = event.getEventDescription();
+
+        System.out.println("[" + name + "] " + evenDescription + "\n" + content);
     }
 }

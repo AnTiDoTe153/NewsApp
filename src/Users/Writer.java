@@ -14,13 +14,13 @@ public class Writer extends NewsEventListener {
     }
 
     public void publishNews(String category, String title, String content){
-        News news = new News(category, title, name, content);
+        News news = new News(category, name, title, content);
         server.publishNews(news, this);
     }
 
     @Override
     public void handleEvent(NewsEvent event) {
         News content = event.getContent();
-        System.out.println(content);
+        System.out.println("[" + name + "] " + content);
     }
 }

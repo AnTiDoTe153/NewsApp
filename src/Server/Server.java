@@ -12,6 +12,7 @@ public class Server {
     private final Object mutex = new Object();
 
     private Server(){
+        newsList = new LinkedList<>();
         serverLoopThread = new Thread(this::serverLoop);
         serverLoopThread.start();
     }
@@ -27,7 +28,10 @@ public class Server {
         synchronized(mutex){
             newsList.addFirst(news);
         }
-        eventDispatcher.register(NewsEventType.NEWS_READ, listener);
+        ListenerData listenerData = new ListenerData(listener);
+        listenerData.addFilter(item -> news.equals(item));
+
+        eventDispatcher.register(NewsEventType.NEWS_READ, listenerData);
 
         NewsEvent event = new NewsEvent(NewsEventType.NEWS_APPEARED, news);
         eventDispatcher.publishEvent(event);
